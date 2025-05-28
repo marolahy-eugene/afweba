@@ -1,0 +1,52 @@
+[
+  {
+    "nom": "Dubois",
+    "prenom": "Marie",
+    "dateDeNaissance": "1985-04-12",
+    "genre": "Femme",
+    "profession": "Ingénieure",
+    "domicile": "Paris",
+    "phone": "0612345678",
+    "email": "marie.dubois@example.com"
+  },
+  {
+    "nom": "Martin",
+    "prenom": "Jean",
+    "dateDeNaissance": "1972-08-23",
+    "genre": "Homme",
+    "profession": "Médecin",
+    "domicile": "Lyon",
+    "phone": "0687654321",
+    "email": "jean.martin@example.com"
+  },
+  {
+    "nom": "Bernard",
+    "prenom": "Sophie",
+    "dateDeNaissance": "1990-11-05",
+    "genre": "Femme",
+    "profession": "Avocate",
+    "domicile": "Marseille",
+    "phone": "0698765432",
+    "email": "sophie.bernard@example.com"
+  },
+  {
+    "nom": "Petit",
+    "prenom": "Thomas",
+    "dateDeNaissance": "1988-02-17",
+    "genre": "Homme",
+    "profession": "Architecte",
+    "domicile": "Bordeaux",
+    "phone": "0609876543",
+    "email": "thomas.petit@example.com"
+  },
+  {
+    "nom": "Leroy",
+    "prenom": "Julie",
+    "dateDeNaissance": "1979-06-30",
+    "genre": "Femme",
+    "profession": "Enseignante",
+    "domicile": "Toulouse",
+    "phone": "0654321098",
+    "email": "julie.leroy@example.com"
+  }
+] 

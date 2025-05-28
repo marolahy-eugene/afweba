@@ -1,0 +1,400 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "age": 45,
+      "sexe": "M",
+      "adresse": "15 rue des Lilas, 75001 Paris",
+      "contact": "+33 6 12 34 56 78",
+      "date_enregistrement": "12/01/2023",
+      "raison_visite": "Céphalées récurrentes"
+    },
+    {
+      "id": 2,
+      "nom": "Martin",
+      "prenom": "Sophie",
+      "age": 32,
+      "sexe": "F",
+      "adresse": "8 avenue Victor Hugo, 69002 Lyon",
+      "contact": "+33 6 23 45 67 89",
+      "date_enregistrement": "15/01/2023",
+      "raison_visite": "Troubles du sommeil"
+    },
+    {
+      "id": 3,
+      "nom": "Petit",
+      "prenom": "Pierre",
+      "age": 58,
+      "sexe": "M",
+      "adresse": "22 boulevard des Alpes, 38000 Grenoble",
+      "contact": "+33 6 34 56 78 90",
+      "date_enregistrement": "20/01/2023",
+      "raison_visite": "Suivi épilepsie"
+    },
+    {
+      "id": 4,
+      "nom": "Durand",
+      "prenom": "Marie",
+      "age": 27,
+      "sexe": "F",
+      "adresse": "5 rue de la Paix, 13001 Marseille",
+      "contact": "+33 6 45 67 89 01",
+      "date_enregistrement": "25/01/2023",
+      "raison_visite": "Migraines"
+    },
+    {
+      "id": 5,
+      "nom": "Leroy",
+      "prenom": "Patrick",
+      "age": 64,
+      "sexe": "M",
+      "adresse": "30 rue du Commerce, 33000 Bordeaux",
+      "contact": "+33 6 56 78 90 12",
+      "date_enregistrement": "01/02/2023",
+      "raison_visite": "Vertiges"
+    },
+    {
+      "id": 6,
+      "nom": "Moreau",
+      "prenom": "Claire",
+      "age": 41,
+      "sexe": "F",
+      "adresse": "12 avenue de la Liberté, 59000 Lille",
+      "contact": "+33 6 67 89 01 23",
+      "date_enregistrement": "05/02/2023",
+      "raison_visite": "Troubles cognitifs"
+    },
+    {
+      "id": 7,
+      "nom": "Simon",
+      "prenom": "Thomas",
+      "age": 36,
+      "sexe": "M",
+      "adresse": "17 rue des Fleurs, 44000 Nantes",
+      "contact": "+33 6 78 90 12 34",
+      "date_enregistrement": "10/02/2023",
+      "raison_visite": "Suivi trauma crânien"
+    },
+    {
+      "id": 8,
+      "nom": "Laurent",
+      "prenom": "Clara",
+      "adresse": "17 rue des Capucines, 75002 Paris",
+      "contact": "0667890123",
+      "raison_visite": "Migraines ophtalmiques",
+      "date_enregistrement": "2024-02-05"
+    },
+    {
+      "id": 9,
+      "nom": "Richard",
+      "prenom": "Julie",
+      "adresse": "3 place Bellecour, 69002 Lyon",
+      "contact": "0645678901",
+      "raison_visite": "Troubles de la mémoire",
+      "date_enregistrement": "2024-01-28"
+    },
+    {
+      "id": 10,
+      "nom": "Michel",
+      "prenom": "Émilie",
+      "adresse": "9 cours Franklin Roosevelt, 69006 Lyon",
+      "contact": "0689012345",
+      "raison_visite": "Troubles de l'équilibre",
+      "date_enregistrement": "2024-02-10"
+    },
+    {
+      "id": 11,
+      "nom": "Lefebvre",
+      "prenom": "Maxime",
+      "adresse": "33 rue de Vaugirard, 75015 Paris",
+      "contact": "0790123456",
+      "raison_visite": "Epilepsie",
+      "date_enregistrement": "2024-02-15"
+    },
+    {
+      "id": 12,
+      "nom": "Mercier",
+      "prenom": "Chloé",
+      "adresse": "14 place du Capitole, 31000 Toulouse",
+      "contact": "0601234567",
+      "raison_visite": "Parkinson débutant",
+      "date_enregistrement": "2024-02-18"
+    },
+    {
+      "id": 13,
+      "nom": "Blanc",
+      "prenom": "Alexandre",
+      "adresse": "7 rue Paradis, 13001 Marseille",
+      "contact": "0712345098",
+      "raison_visite": "Troubles cognitifs",
+      "date_enregistrement": "2024-02-22"
+    },
+    {
+      "id": 14,
+      "nom": "Guerin",
+      "prenom": "Manon",
+      "adresse": "28 rue du Faubourg Saint-Antoine, 75011 Paris",
+      "contact": "0623450987",
+      "raison_visite": "Migraines sévères",
+      "date_enregistrement": "2024-02-25"
+    },
+    {
+      "id": 15,
+      "nom": "Boyer",
+      "prenom": "Julien",
+      "adresse": "16 rue de la Liberté, 21000 Dijon",
+      "contact": "0734509876",
+      "raison_visite": "Troubles du sommeil",
+      "date_enregistrement": "2024-03-01"
+    },
+    {
+      "id": 16,
+      "nom": "Lemaire",
+      "prenom": "Sarah",
+      "adresse": "5 boulevard des Lices, 13100 Aix-en-Provence",
+      "contact": "0645098765",
+      "raison_visite": "Syncopes à répétition",
+      "date_enregistrement": "2024-03-05"
+    },
+    {
+      "id": 17,
+      "nom": "Faure",
+      "prenom": "Gabriel",
+      "adresse": "42 rue Nationale, 59000 Lille",
+      "contact": "0756098765",
+      "raison_visite": "Malaises inexpliqués",
+      "date_enregistrement": "2024-03-08"
+    },
+    {
+      "id": 18,
+      "nom": "Rousseau",
+      "prenom": "Camille",
+      "adresse": "11 rue des Dames, 75017 Paris",
+      "contact": "0667890321",
+      "raison_visite": "Épilepsie photosensible",
+      "date_enregistrement": "2024-03-12"
+    },
+    {
+      "id": 19,
+      "nom": "Henry",
+      "prenom": "Louis",
+      "adresse": "3 place de la Bourse, 33000 Bordeaux",
+      "contact": "0778902134",
+      "raison_visite": "Suivi post-traumatique",
+      "date_enregistrement": "2024-03-15"
+    },
+    {
+      "id": 20,
+      "nom": "Leroy",
+      "prenom": "Léa",
+      "adresse": "19 rue des Carmes, 45000 Orléans",
+      "contact": "0689012543",
+      "raison_visite": "Convulsions fébriles",
+      "date_enregistrement": "2024-03-18"
+    }
+  ],
+  "analyses": [
+    {
+      "id": 1,
+      "id_patient": 1,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "15/01/2023",
+      "status": "Complété",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "Activité normale"
+    },
+    {
+      "id": 2,
+      "id_patient": 2,
+      "type_analyse": "EEG Prolongé",
+      "date_enregistrement": "18/01/2023",
+      "status": "Complété",
+      "medecin": "Dr. Fournier",
+      "duree": "2h",
+      "notes": "Quelques anomalies détectées"
+    },
+    {
+      "id": 3,
+      "id_patient": 3,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "22/01/2023",
+      "status": "Complété",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "RAS"
+    },
+    {
+      "id": 4,
+      "id_patient": 1,
+      "type_analyse": "EEG Vidéo",
+      "date_enregistrement": "30/01/2023",
+      "status": "En cours",
+      "medecin": "Dr. Fournier",
+      "duree": "1h",
+      "notes": "En attente de rapport"
+    },
+    {
+      "id": 5,
+      "id_patient": 5,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "02/02/2023",
+      "status": "Complété",
+      "medecin": "Dr. Martin",
+      "duree": "30 min",
+      "notes": "Activité normale"
+    },
+    {
+      "id": 6,
+      "id_patient": 6,
+      "type_analyse": "EEG Détaillé",
+      "date_enregistrement": "06/02/2023",
+      "status": "Planifié",
+      "medecin": "Dr. Lambert",
+      "duree": "N/A",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 7,
+      "id_patient": 4,
+      "type_analyse": "EEG Sommeil",
+      "date_enregistrement": "28/01/2023",
+      "status": "Complété",
+      "medecin": "Dr. Martin",
+      "duree": "8h",
+      "notes": "Troubles du sommeil confirmés"
+    },
+    {
+      "id": 8,
+      "id_patient": 7,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "12/02/2023",
+      "status": "En attente",
+      "medecin": "Dr. Fournier",
+      "duree": "N/A",
+      "notes": "Patient à contacter"
+    },
+    {
+      "id": 9,
+      "id_patient": 9,
+      "type_analyse": "EEG Quantitatif",
+      "date_enregistrement": "2024-02-10",
+      "status": "Complété",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "Activité normale"
+    },
+    {
+      "id": 10,
+      "id_patient": 10,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "2024-02-12",
+      "status": "Complété",
+      "medecin": "Dr. Fournier",
+      "duree": "30 min",
+      "notes": "Activité normale"
+    },
+    {
+      "id": 11,
+      "id_patient": 11,
+      "type_analyse": "EEG Prolongé",
+      "date_enregistrement": "2024-02-17",
+      "status": "En cours",
+      "medecin": "Dr. Martin",
+      "duree": "2h",
+      "notes": "Quelques anomalies détectées"
+    },
+    {
+      "id": 12,
+      "id_patient": 12,
+      "type_analyse": "EEG avec stimulation",
+      "date_enregistrement": "2024-02-20",
+      "status": "En cours",
+      "medecin": "Dr. Fournier",
+      "duree": "N/A",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 13,
+      "id_patient": 13,
+      "type_analyse": "EEG cognitif",
+      "date_enregistrement": "2024-02-24",
+      "status": "En cours",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "En attente de rapport"
+    },
+    {
+      "id": 14,
+      "id_patient": 14,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "2024-02-27",
+      "status": "En cours",
+      "medecin": "Dr. Fournier",
+      "duree": "30 min",
+      "notes": "En attente de rapport"
+    },
+    {
+      "id": 15,
+      "id_patient": 15,
+      "type_analyse": "Polysomnographie",
+      "date_enregistrement": "2024-03-03",
+      "status": "Planifié",
+      "medecin": "Dr. Martin",
+      "duree": "8h",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 16,
+      "id_patient": 16,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "2024-03-07",
+      "status": "Planifié",
+      "medecin": "Dr. Fournier",
+      "duree": "30 min",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 17,
+      "id_patient": 17,
+      "type_analyse": "EEG Standard",
+      "date_enregistrement": "2024-03-10",
+      "status": "Planifié",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 18,
+      "id_patient": 18,
+      "type_analyse": "EEG avec stimulation photo",
+      "date_enregistrement": "2024-03-14",
+      "status": "Planifié",
+      "medecin": "Dr. Fournier",
+      "duree": "30 min",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 19,
+      "id_patient": 19,
+      "type_analyse": "EEG Quantitatif",
+      "date_enregistrement": "2024-03-17",
+      "status": "Planifié",
+      "medecin": "Dr. Martin",
+      "duree": "30 min",
+      "notes": "Rendez-vous confirmé"
+    },
+    {
+      "id": 20,
+      "id_patient": 1,
+      "type_analyse": "EEG de suivi",
+      "date_enregistrement": "2024-03-20",
+      "status": "Planifié",
+      "medecin": "Dr. Lambert",
+      "duree": "30 min",
+      "notes": "Rendez-vous confirmé"
+    }
+  ]
+} 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="128" fill="#1E40AF" />
+  <path d="M128 42C79.4015 42 40 81.4015 40 130C40 178.598 79.4015 218 128 218C176.598 218 216 178.598 216 130C216 81.4015 176.598 42 128 42Z" fill="white" />
+  <path d="M76 130C76 123.373 81.3726 118 88 118C94.6274 118 100 123.373 100 130C100 136.627 94.6274 142 88 142C81.3726 142 76 136.627 76 130Z" fill="#1E40AF" />
+  <path d="M116 130C116 123.373 121.373 118 128 118C134.627 118 140 123.373 140 130C140 136.627 134.627 142 128 142C121.373 142 116 136.627 116 130Z" fill="#1E40AF" />
+  <path d="M156 130C156 123.373 161.373 118 168 118C174.627 118 180 123.373 180 130C180 136.627 174.627 142 168 142C161.373 142 156 136.627 156 130Z" fill="#1E40AF" />
+  <path d="M60 102H196" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M60 130H196" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M60 158H196" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M88 70V190" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M128 70V190" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M168 70V190" stroke="#1E40AF" stroke-width="4" stroke-linecap="round" />
+  <path d="M60 100C60 93.3726 65.3726 88 72 88H80C86.6274 88 92 93.3726 92 100V100C92 106.627 86.6274 112 80 112H72C65.3726 112 60 106.627 60 100V100Z" fill="#EF4444" />
+  <path d="M164 160C164 153.373 169.373 148 176 148H184C190.627 148 196 153.373 196 160V160C196 166.627 190.627 172 184 172H176C169.373 172 164 166.627 164 160V160Z" fill="#10B981" />
+  <path d="M116 100C116 93.3726 121.373 88 128 88H136C142.627 88 148 93.3726 148 100V100C148 106.627 142.627 112 136 112H128C121.373 112 116 106.627 116 100V100Z" fill="#3B82F6" />
+</svg> 
