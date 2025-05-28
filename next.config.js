@@ -21,6 +21,8 @@ const nextConfig = {
     });
     return config;
   },
+  // Configuration pour l'export statique
+  output: 'export',
 };
 
 module.exports = nextConfig;

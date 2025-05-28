@@ -11,19 +11,20 @@ import { FiArrowLeft } from 'react-icons/fi';
 /**
  * Page d'interprétation d'un examen EEG
  */
-export default function InterpretationPage() {
+export default function InterpretationPage({ examenInitial, patientInitial, errorInitial }) {
   const router = useRouter();
   const { id } = router.query;
   const { user, userRole } = useAuth();
   
-  const [examen, setExamen] = useState(null);
-  const [patient, setPatient] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [examen, setExamen] = useState(examenInitial || null);
+  const [patient, setPatient] = useState(patientInitial || null);
+  const [loading, setLoading] = useState(!examenInitial);
+  const [error, setError] = useState(errorInitial || null);
 
-  // Récupérer les données de l'examen
+  // Récupérer les données de l'examen côté client si nécessaire
   useEffect(() => {
-    if (!id) return;
+    // Si nous avons déjà les données du rendu statique, ne pas refaire l'appel
+    if (examenInitial || !id) return;
     
     const fetchExamen = async () => {
       try {
@@ -53,7 +54,7 @@ export default function InterpretationPage() {
     };
     
     fetchExamen();
-  }, [id]);
+  }, [id, examenInitial]);
 
   // Vérifier si l'utilisateur est autorisé à accéder à cette page
   useEffect(() => {
@@ -84,7 +85,7 @@ export default function InterpretationPage() {
           <FiArrowLeft size={24} />
         </button>
         <h2 className="text-2xl font-semibold text-gray-200 dark:text-white ml-4">
-        Interpretation de l'examen : {patient ? `${patient.nom} ${patient.prenom}` : examen.id}
+        Interpretation de l'examen : {patient ? `${patient.nom} ${patient.prenom}` : (examen ? examen.id : 'Chargement...')}
         </h2>
       </div>
       <Layout>
@@ -109,6 +110,43 @@ export default function InterpretationPage() {
         </div>
       </Layout>
     </div>
-    
   );
+}
+
+// Générer les chemins statiques pour les pages d'interprétation
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  };
+}
+
+// Récupérer les données pour le rendu statique
+export async function getStaticProps({ params }) {
+  const { id } = params;
+  
+  try {
+    const examenData = await firebaseService.getExamenById(id);
+    let patientData = null;
+    
+    if (examenData?.patientId) {
+      patientData = await firebaseService.getPatientById(examenData.patientId);
+    }
+    
+    return {
+      props: {
+        examenInitial: examenData || null,
+        patientInitial: patientData || null,
+      },
+      revalidate: 60 // Revalider les pages toutes les 60 secondes
+    };
+  } catch (error) {
+    return {
+      props: {
+        examenInitial: null,
+        patientInitial: null,
+        errorInitial: error.message
+      }
+    };
+  }
 }

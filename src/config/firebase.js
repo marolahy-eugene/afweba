@@ -61,6 +61,7 @@ try {
   console.error('Erreur lors de l\'initialisation de Firebase:', error);
 }
 
-export { db, storage };
+// Exporter les instances Firebase
+export { app, db, auth, storage, analytics };
 export default firebaseConfig;
 
