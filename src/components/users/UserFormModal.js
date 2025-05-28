@@ -431,7 +431,139 @@ const UserFormModal = ({ currentUser, onSave, onCancel, fromProfile = false }) =
                         />
                       </div>
 
+                      {/* Section mot de passe pour nouvel utilisateur */}
+                      {!currentUser && (
+                        <div className="sm:col-span-2 mx-0 my-4 bg-claire-2 rounded rounded-md w-auto bg-opacity-30 items-center">
+                          <label className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3 flex w-full bg-claire-2 px-5 py-4">
+                            <FiLock className="mr-2" /> Définir le mot de passe
+                          </label>
+                          <div className="p-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            {passwordError && (
+                              <div className="sm:col-span-2 text-red-500 text-sm mb-2">
+                                {passwordError}
+                              </div>
+                            )}
+                            <div>
+                              <label htmlFor="password" className="block text-md font-medium text-gray-700 dark:text-gray-300">
+                                Mot de passe *
+                              </label>
+                              <div className="mt-1 relative rounded-md shadow-sm">
+                                <input
+                                  type={showPassword ? "text" : "password"}
+                                  id="password"
+                                  name="password"
+                                  required
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                <button
+                                  type="button"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
+                                  onClick={() => setShowPassword(!showPassword)}
+                                >
+                                  {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                                </button>
+                              </div>
+                            </div>
+                            <div>
+                              <label htmlFor="confirmPassword" className="block text-md font-medium text-gray-700 dark:text-gray-300">
+                                Confirmer le mot de passe *
+                              </label>
+                              <div className="mt-1 relative rounded-md shadow-sm">
+                                <input
+                                  type={showConfirmPassword ? "text" : "password"}
+                                  id="confirmPassword"
+                                  name="confirmPassword"
+                                  required
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                <button
+                                  type="button"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
+                                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                >
+                                  {showConfirmPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {/* Section mot de passe pour modification d'utilisateur existant */}
+                      {currentUser && (
+                        <div className="sm:col-span-2 mx-0 my-4 bg-claire-2 rounded rounded-md w-auto bg-opacity-30 items-center">
+                          <label className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3 flex w-full bg-claire-2 px-5 py-4">
+                            <FiLock className="mr-2" /> Modifier le mot de passe
+                          </label>
+                          <div className="p-5 grid grid-cols-1 gap-4">
+                            {passwordError && (
+                              <div className="sm:col-span-2 text-red-500 text-sm mb-2">
+                                {passwordError}
+                              </div>
+                            )}
+                            <div>
+                              <label htmlFor="currentPassword" className="block text-md font-medium text-gray-700 dark:text-gray-300">
+                                Mot de passe actuel
+                              </label>
+                              <div className="mt-1 relative rounded-md shadow-sm">
+                                <input
+                                  type={showPassword ? "text" : "password"}
+                                  id="currentPassword"
+                                  name="currentPassword"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                <button
+                                  type="button"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
+                                  onClick={() => setShowPassword(!showPassword)}
+                                >
+                                  {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                                </button>
+                              </div>
+                            </div>
+                            <div>
+                              <label htmlFor="newPassword" className="block text-md font-medium text-gray-700 dark:text-gray-300">
+                                Nouveau mot de passe
+                              </label>
+                              <div className="mt-1 relative rounded-md shadow-sm">
+                                <input
+                                  type={showNewPassword ? "text" : "password"}
+                                  id="newPassword"
+                                  name="newPassword"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                <button
+                                  type="button"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
+                                  onClick={() => setShowNewPassword(!showNewPassword)}
+                                >
+                                  {showNewPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                                </button>
+                              </div>
+                            </div>
+                            <div>
+                              <label htmlFor="confirmNewPassword" className="block text-md font-medium text-gray-700 dark:text-gray-300">
+                                Confirmer le nouveau mot de passe
+                              </label>
+                              <div className="mt-1 relative rounded-md shadow-sm">
+                                <input
+                                  type={showConfirmPassword ? "text" : "password"}
+                                  id="confirmNewPassword"
+                                  name="confirmNewPassword"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                <button
+                                  type="button"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
+                                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                >
+                                  {showConfirmPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
                       {currentUser && (
                         <div className="sm:col-span-2 mx-0 my-4 bg-claire-2 rounded rounded-md w-auto bg-opacity-30 items-center">
@@ -453,14 +585,14 @@ const UserFormModal = ({ currentUser, onSave, onCancel, fromProfile = false }) =
                                   type={showPassword ? "text" : "password"}
                                   id="currentPassword"
                                   name="currentPassword"
-                                  className="block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 />
                                 <button
                                   type="button"
-                                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
                                   onClick={() => setShowPassword(!showPassword)}
                                 >
-                                  {showPassword ? <FiEyeOff /> : <FiEye />}
+                                  {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
                                 </button>
                               </div>
                             </div>
@@ -473,14 +605,14 @@ const UserFormModal = ({ currentUser, onSave, onCancel, fromProfile = false }) =
                                   type={showNewPassword ? "text" : "password"}
                                   id="newPassword"
                                   name="newPassword"
-                                  className="block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 />
                                 <button
                                   type="button"
-                                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
                                   onClick={() => setShowNewPassword(!showNewPassword)}
                                 >
-                                  {showNewPassword ? <FiEyeOff /> : <FiEye />}
+                                  {showNewPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
                                 </button>
                               </div>
                             </div>
@@ -493,44 +625,21 @@ const UserFormModal = ({ currentUser, onSave, onCancel, fromProfile = false }) =
                                   type={showConfirmPassword ? "text" : "password"}
                                   id="confirmNewPassword"
                                   name="confirmNewPassword"
-                                  className="block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                  className="block w-full pr-10 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 />
                                 <button
                                   type="button"
-                                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-500"
                                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                 >
-                                  {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                                  {showConfirmPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
                                 </button>
                               </div>
                             </div>
                           </div>
                         </div>
                       )}
-                                            
-                    </div>
-                  </div>
-                  
-                  {/* Section informations professionnelles */}
 
-                  <div className="flex-1">
-                    <h4 className="text-md font-medium text-gray-700 dark:text-gray-300 mb-4">Informations professionnelles</h4>
-                    
-                    <div className="grid grid-cols-1 gap-y-6 gap-x-4">
-                      <div>
-                        <label htmlFor="email" className="block text-md font-medium text-gray-700 dark:text-gray-300">
-                          Email *
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          required
-                          defaultValue={currentUser?.email || ''}
-                          className="mt-1 block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                        />
-                      </div>
-                      
                       <div>
                         <label htmlFor="fonction" className="block text-md font-medium text-gray-700 dark:text-gray-300">
                           Fonction *
@@ -543,15 +652,14 @@ const UserFormModal = ({ currentUser, onSave, onCancel, fromProfile = false }) =
                           className="mt-1 block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                         >
                           <option value="">Sélectionner une fonction</option>
+                          <option value="Administrateur">Administrateur</option>
                           <option value="Medecin">Médecin</option>
                           <option value="Infirmier">Infirmier</option>
                           <option value="Technicien">Technicien</option>
-                          <option value="Professeur">Professeur</option>
-                          <option value="Receptionniste">Réceptionniste</option>
-                          <option value="Administrateur">Administrateur</option>
+                          <option value="Accueil">Accueil</option>
                         </select>
                       </div>
-                      
+
                       <div>
                         <label htmlFor="lieuTravail" className="block text-md font-medium text-gray-700 dark:text-gray-300">
                           Lieu de travail *

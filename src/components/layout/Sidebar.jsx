@@ -162,9 +162,9 @@ const Sidebar = ({ open }) => {
     >
       <div className="flex items-center justify-center h-16 border-b border-primary-700">
         {open ? (
-          <h1 className="text-xl font-bold text-white">Afweba-upgrade</h1>
+          <h1 className="text-xl font-bold text-white">CNA-Plateforme</h1>
         ) : (
-          <h1 className="text-xl font-bold text-white">EEG</h1>
+          <h1 className="text-xl font-bold text-white">CNA</h1>
         )}
       </div>
 

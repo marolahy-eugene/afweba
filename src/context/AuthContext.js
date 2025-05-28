@@ -7,12 +7,11 @@ export const AuthContext = createContext();
 
 // Définition des rôles disponibles
 export const ROLES = {
-  RECEPTIONNISTE: 'receptionniste',
-  INFIRMIER: 'infirmier',
-  MEDECIN: 'medecin',
-  PROFESSEUR: 'professeur',
-  TECHNICIEN: 'technicien',
   ADMINISTRATEUR: 'administrateur',
+  MEDECIN: 'medecin',
+  INFIRMIER: 'infirmier',
+  TECHNICIEN: 'technicien',
+  ACCUEIL: 'accueil',
 };
 
 /**
