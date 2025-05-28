@@ -11,20 +11,19 @@ import { FiArrowLeft } from 'react-icons/fi';
 /**
  * Page d'interprétation d'un examen EEG
  */
-export default function InterpretationPage({ examenInitial, patientInitial, errorInitial }) {
+export default function InterpretationPage() {
   const router = useRouter();
   const { id } = router.query;
   const { user, userRole } = useAuth();
   
-  const [examen, setExamen] = useState(examenInitial || null);
-  const [patient, setPatient] = useState(patientInitial || null);
-  const [loading, setLoading] = useState(!examenInitial);
-  const [error, setError] = useState(errorInitial || null);
+  const [examen, setExamen] = useState(null);
+  const [patient, setPatient] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Récupérer les données de l'examen côté client si nécessaire
+  // Récupérer les données de l'examen côté client
   useEffect(() => {
-    // Si nous avons déjà les données du rendu statique, ne pas refaire l'appel
-    if (examenInitial || !id) return;
+    if (!id) return;
     
     const fetchExamen = async () => {
       try {
@@ -54,7 +53,7 @@ export default function InterpretationPage({ examenInitial, patientInitial, erro
     };
     
     fetchExamen();
-  }, [id, examenInitial]);
+  }, [id]);
 
   // Vérifier si l'utilisateur est autorisé à accéder à cette page
   useEffect(() => {
@@ -113,40 +112,21 @@ export default function InterpretationPage({ examenInitial, patientInitial, erro
   );
 }
 
-// Générer les chemins statiques pour les pages d'interprétation
+// Cette fonction est nécessaire pour l'export statique avec Next.js
 export async function getStaticPaths() {
   return {
+    // Ne pas pré-générer de pages à la compilation
     paths: [],
-    fallback: 'blocking'
+    // Utiliser 'false' pour retourner 404 pour les chemins non générés
+    // au lieu de 'blocking' qui tente de les générer à la demande
+    fallback: false
   };
 }
 
-// Récupérer les données pour le rendu statique
-export async function getStaticProps({ params }) {
-  const { id } = params;
-  
-  try {
-    const examenData = await firebaseService.getExamenById(id);
-    let patientData = null;
-    
-    if (examenData?.patientId) {
-      patientData = await firebaseService.getPatientById(examenData.patientId);
-    }
-    
-    return {
-      props: {
-        examenInitial: examenData || null,
-        patientInitial: patientData || null,
-      },
-      revalidate: 60 // Revalider les pages toutes les 60 secondes
-    };
-  } catch (error) {
-    return {
-      props: {
-        examenInitial: null,
-        patientInitial: null,
-        errorInitial: error.message
-      }
-    };
-  }
+// Cette fonction est nécessaire pour l'export statique avec Next.js
+export async function getStaticProps() {
+  return {
+    // Retourner des props vides
+    props: {}
+  };
 }
