@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import Layout from '@/components/layout/Layout';
 import InterpretationForm from '@/components/interpretation/InterpretationForm';
 import firebaseService from '@/services/firebaseService';
-import LoadingSpinner from '@/components/common/LoadingSpinner';
-import ErrorMessage from '@/components/common/ErrorMessage';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import ErrorMessage from '@/components/ui/ErrorMessage';
 import { FiArrowLeft } from 'react-icons/fi';
 
 /**
